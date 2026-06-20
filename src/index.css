@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 150 30% 99%;
+    --foreground: 160 25% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 160 25% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 160 25% 12%;
+
+    --primary: 152 56% 32%;
+    --primary-foreground: 150 40% 98%;
+
+    --secondary: 150 20% 94%;
+    --secondary-foreground: 160 25% 18%;
+
+    --muted: 150 16% 95%;
+    --muted-foreground: 160 10% 42%;
+
+    --accent: 28 90% 54%;
+    --accent-foreground: 30 40% 98%;
+
+    --destructive: 0 72% 48%;
+    --destructive-foreground: 0 0% 98%;
+
+    --success: 152 56% 36%;
+    --success-foreground: 150 40% 98%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 30 50% 12%;
+
+    --border: 150 14% 88%;
+    --input: 150 14% 88%;
+    --ring: 152 56% 32%;
+
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 160 28% 7%;
+    --foreground: 150 20% 96%;
+
+    --card: 160 26% 10%;
+    --card-foreground: 150 20% 96%;
+
+    --popover: 160 26% 10%;
+    --popover-foreground: 150 20% 96%;
+
+    --primary: 152 52% 46%;
+    --primary-foreground: 160 30% 8%;
+
+    --secondary: 160 18% 16%;
+    --secondary-foreground: 150 20% 96%;
+
+    --muted: 160 18% 16%;
+    --muted-foreground: 150 10% 64%;
+
+    --accent: 28 90% 56%;
+    --accent-foreground: 30 40% 10%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 98%;
+
+    --success: 152 52% 46%;
+    --success-foreground: 160 30% 8%;
+
+    --warning: 38 92% 56%;
+    --warning-foreground: 30 50% 10%;
+
+    --border: 160 16% 20%;
+    --input: 160 16% 22%;
+    --ring: 152 52% 46%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+.grid-bg {
+  background-image:
+    linear-gradient(to right, hsl(var(--border) / 0.5) 1px, transparent 1px),
+    linear-gradient(to bottom, hsl(var(--border) / 0.5) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
